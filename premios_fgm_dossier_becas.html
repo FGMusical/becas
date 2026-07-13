@@ -224,6 +224,7 @@
     background: rgba(255,255,255,0.12);
   }
 
+
   .hero-body {
     font-size: 15px;
     font-weight: 300;
@@ -504,6 +505,144 @@
     line-height: 1.85;
     color: var(--gris-institucional);
     margin-bottom: 24px;
+  }
+
+  /* ─── SECCIONES DE MODALIDAD ─── */
+  .modalidad {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .modalidad.mod-crema { background: var(--crema); }
+  .modalidad.mod-dark { background: #1A0405; }
+
+  .mod-num-bg {
+    position: absolute;
+    top: 40px;
+    right: -20px;
+    font-family: var(--serif);
+    font-size: 320px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .mod-crema .mod-num-bg { color: rgba(26,26,26,0.035); }
+  .mod-dark  .mod-num-bg { color: rgba(255,255,255,0.03); }
+
+  .mod-inner { position: relative; z-index: 1; }
+
+  .mod-head { margin-bottom: 56px; max-width: 760px; }
+  .mod-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--rojo);
+    margin-bottom: 20px; display: flex; align-items: center; gap: 12px;
+  }
+  .mod-label::before { content:''; width: 28px; height: 2px; background: var(--rojo); display:block; }
+
+  .mod-name {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5vw, 66px);
+    font-weight: 300; line-height: 1.05; letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+  .mod-crema .mod-name { color: var(--negro); }
+  .mod-dark  .mod-name { color: var(--blanco); }
+  .mod-name em { color: var(--rojo); font-style: italic; font-weight: 400; }
+
+  .mod-principle {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.2vw, 26px);
+    font-weight: 300; font-style: italic; line-height: 1.5;
+    max-width: 640px;
+  }
+  .mod-crema .mod-principle { color: var(--gris-institucional); }
+  .mod-dark  .mod-principle { color: rgba(255,255,255,0.75); }
+  .mod-principle strong { font-style: normal; font-weight: 600; }
+  .mod-crema .mod-principle strong { color: var(--negro); }
+  .mod-dark  .mod-principle strong { color: var(--blanco); }
+
+  .mod-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .mod-narrative {
+    font-size: 15px; font-weight: 300; line-height: 1.85; margin-bottom: 22px;
+  }
+  .mod-crema .mod-narrative { color: var(--gris-institucional); }
+  .mod-dark  .mod-narrative { color: rgba(255,255,255,0.62); }
+  .mod-narrative strong { font-weight: 600; }
+  .mod-crema .mod-narrative strong { color: var(--negro); }
+  .mod-dark  .mod-narrative strong { color: var(--blanco); }
+
+  .mod-pull {
+    border-left: 3px solid var(--rojo);
+    padding: 6px 0 6px 24px;
+    margin: 4px 0 8px;
+    font-family: var(--serif);
+    font-size: 22px; font-weight: 300; line-height: 1.4;
+  }
+  .mod-crema .mod-pull { color: var(--negro); }
+  .mod-dark  .mod-pull { color: var(--blanco); }
+
+  .mod-block { margin-bottom: 32px; }
+  .mod-block-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 16px; padding-bottom: 10px;
+  }
+  .mod-crema .mod-block-label { color: var(--negro); border-bottom: 1px solid var(--gris-suave); }
+  .mod-dark  .mod-block-label { color: var(--blanco); border-bottom: 1px solid rgba(255,255,255,0.12); }
+
+  .mod-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .mod-item-mark {
+    flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    background: rgba(197,34,46,0.12);
+  }
+  .mod-item-mark svg { width: 10px; height: 10px; stroke: var(--rojo); stroke-width: 3; fill: none; }
+  .mod-item-text { font-size: 13px; font-weight: 300; line-height: 1.6; }
+  .mod-crema .mod-item-text { color: var(--gris-institucional); }
+  .mod-dark  .mod-item-text { color: rgba(255,255,255,0.6); }
+  .mod-item-text strong { font-weight: 600; }
+  .mod-crema .mod-item-text strong { color: var(--negro); }
+  .mod-dark  .mod-item-text strong { color: var(--blanco); }
+
+  .mod-sponsor {
+    padding: 24px 26px; margin-top: 8px;
+    background: rgba(197,34,46,0.05);
+    border: 1px solid rgba(197,34,46,0.18);
+  }
+  .mod-dark .mod-sponsor { background: rgba(197,34,46,0.1); border-color: rgba(197,34,46,0.3); }
+  .mod-sponsor-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--rojo); margin-bottom: 10px;
+  }
+  .mod-sponsor-text { font-size: 13px; font-weight: 300; line-height: 1.7; }
+  .mod-crema .mod-sponsor-text { color: var(--gris-institucional); }
+  .mod-dark  .mod-sponsor-text { color: rgba(255,255,255,0.65); }
+
+  /* Diagrama de canalización (Modalidad 03) */
+  .mod-flow { display: flex; align-items: stretch; gap: 0; margin: 8px 0 4px; }
+  .mod-flow-node {
+    flex: 1; text-align: center; padding: 24px 14px;
+    background: var(--blanco); border: 1px solid var(--gris-suave);
+  }
+  .mod-flow-node.node-accent { border-color: var(--rojo); border-width: 1px 1px 2px; }
+  .mod-flow-icon {
+    width: 34px; height: 34px; margin: 0 auto 12px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; background: rgba(197,34,46,0.08);
+  }
+  .mod-flow-icon svg { width: 17px; height: 17px; stroke: var(--rojo); stroke-width: 1.7; fill: none; }
+  .mod-flow-title { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--negro); margin-bottom: 6px; }
+  .mod-flow-sub { font-size: 11px; font-weight: 300; line-height: 1.5; color: var(--gris-institucional); }
+  .mod-flow-arrow {
+    flex-shrink: 0; width: 32px; display: flex; align-items: center; justify-content: center;
+    color: var(--rojo); font-size: 18px;
   }
 
   .sistema-grid {
@@ -1641,6 +1780,11 @@
     .esg-usos { grid-template-columns: 1fr; }
     .proceso-content { padding: 48px 32px; }
     .proceso-features { grid-template-columns: 1fr; }
+    .tramos-grid { grid-template-columns: 1fr 1fr !important; }
+    .mod-grid { grid-template-columns: 1fr; gap: 40px; }
+    .mod-num-bg { font-size: 200px; top: 20px; }
+    .mod-flow { flex-direction: column; }
+    .mod-flow-arrow { width: 100%; height: 28px; transform: rotate(90deg); }
   }
 
   @media (max-width: 600px) {
@@ -1693,13 +1837,13 @@
     <div class="hero-label">Dossier de Patrocinio</div>
 
     <h1 class="hero-headline">
-      El talento existe.<br>El <em>acceso</em>,<br>no siempre.
+      Reconocer el <em>talento</em>.<br>Garantizar el <em>acceso</em>.<br>Dos razones.
     </h1>
 
-    <div class="hero-key-concept">Del acceso al talento</div>
+    <div class="hero-key-concept">Mérito y equidad</div>
 
     <p class="hero-body">
-      El Programa de Becas de Fundación Grado Musical destina recursos a que ningún niño o joven se quede fuera de la educación musical por motivos económicos, y a que el talento emergente tenga con qué crecer. Becas anuales, vinculadas al curso escolar, con un destino claro y verificable.
+      El Programa de Becas de Fundación Grado Musical apoya a quien destaca por su talento, cualquiera que sea su situación económica, y a quien necesita apoyo para que sus recursos no decidan su formación musical. Dos motivos distintos, un mismo compromiso. Becas anuales, vinculadas al curso escolar, con un destino claro y verificable.
     </p>
 
     <div class="hero-date-box">
@@ -1727,11 +1871,11 @@
         </div>
         <div style="text-align:center;">
           <div style="font-family:var(--serif);font-size:24px;font-weight:300;color:rgba(255,255,255,0.7);letter-spacing:0.05em;">Programa de Becas</div>
-          <div style="font-size:10px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.25);">Acceso · Inclusión · Talento</div>
+          <div style="font-size:10px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.25);">Talento · Equidad · Comunidad educativa</div>
         </div>
 
         <div style="margin-top:24px;text-align:center;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:12px;">Tres modalidades</div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:12px;">Concurrencia competitiva</div>
           <svg width="200" height="20" viewBox="0 0 200 20" fill="none" style="opacity:0.15">
             <line x1="0" y1="4" x2="200" y2="4" stroke="white" stroke-width="0.5"/>
             <line x1="0" y1="8" x2="200" y2="8" stroke="white" stroke-width="0.5"/>
@@ -1747,7 +1891,7 @@
 
 <!-- ─── 2. DECLARACIÓN ───────────────────────── -->
 <section id="declaracion">
-  <div class="declaracion-bg-text">ACCESO</div>
+  <div class="declaracion-bg-text">MÉRITO</div>
   <div class="declaracion-inner">
     <div class="declaracion-eyebrow">El espíritu del programa</div>
     <h2 class="declaracion-quote">
@@ -1755,7 +1899,7 @@
       Es <strong>una puerta que se abre</strong><br>en el momento exacto.
     </h2>
     <p class="declaracion-body">
-      El Programa de Becas facilita el acceso a la educación musical a niños y jóvenes de comunidades o situaciones desfavorecidas, y a la vez identifica y nutre el talento emergente. Una sola decisión —una beca— puede cambiar la trayectoria de una persona y, con ella, la de su familia y su entorno.
+      El Programa de Becas se concede por dos motivos independientes: el talento acreditado, con independencia de la situación económica, y la necesidad económica acreditada, para que aprender música no dependa de los recursos de cada familia. Una sola decisión —una beca— puede cambiar la trayectoria de una persona y, con ella, la de su familia y su entorno.
     </p>
   </div>
 </section>
@@ -1789,7 +1933,7 @@
           <div class="sistema-item active">
             <div class="sistema-item-num">01</div>
             <div class="sistema-item-title">Becas</div>
-            <div class="sistema-item-body">Acceso a la educación musical para quienes más lo necesitan y para el talento emergente.</div>
+            <div class="sistema-item-body">Ayudas al talento y ayudas por razones económicas, además de apoyo a instituciones educativas.</div>
           </div>
           <div class="sistema-item">
             <div class="sistema-item-num">02</div>
@@ -1828,10 +1972,10 @@
     <div class="programa-header reveal">
       <div class="section-label">Programa de Becas</div>
       <h2 class="programa-title">
-        Tres formas de<br>cambiar una <em>trayectoria</em>.
+        Dos razones para<br>conceder una <em>beca</em>.
       </h2>
       <p class="programa-subtitle">
-        La Fundación destina parte de sus recursos a la concesión de becas para la realización de estudios y programas educativos relacionados con la formación artística y musical. La actividad se desglosa en tres modalidades, cada una con un beneficiario y un propósito distinto.
+        La Fundación destina parte de sus recursos a la concesión de becas para la realización de estudios y programas educativos relacionados con la formación artística y musical. Las becas se conceden en régimen de concurrencia competitiva, atendiendo a dos criterios independientes —el talento y las razones económicas— y pueden canalizarse a través de las instituciones educativas.
       </p>
     </div>
 
@@ -1840,19 +1984,19 @@
         <div class="programa-card-num">01</div>
         <div class="programa-card-icon">
           <svg viewBox="0 0 24 24">
-            <path d="M3 21h18M3 7v1a3 3 0 006 0V7m6 0v1a3 3 0 006 0V7M3 7l3-4h12l3 4"/>
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
           </svg>
         </div>
         <div class="programa-card-label">Modalidad 01</div>
-        <h3 class="programa-card-title">Instituciones educativas</h3>
+        <h3 class="programa-card-title">Beca al Talento</h3>
         <p class="programa-card-body">
-          Apoyo a centros e instituciones que promueven la formación artística, cultural y musical. La beca se canaliza a través de la institución para que la música forme parte real de su proyecto educativo y llegue a más alumnos.
+          Dirigida a alumnos que acreditan un nivel musical y académico elevado, <strong style="font-weight:600;color:var(--blanco);">con independencia de su situación económica</strong>. El talento se reconoce donde aparece: el mérito es el único criterio de acceso a esta modalidad.
         </p>
         <div class="programa-card-criterios">
-          <div class="programa-card-criterios-label">Qué financia</div>
-          <div class="criterio"><span>Programas y recursos de educación musical en el centro</span></div>
-          <div class="criterio"><span>Acceso de alumnos que de otro modo quedarían fuera</span></div>
-          <div class="criterio"><span>Proyectos replicables y con impacto en la comunidad educativa</span></div>
+          <div class="programa-card-criterios-label">Qué se valora</div>
+          <div class="criterio"><span>Nivel musical acreditado y progresión formativa</span></div>
+          <div class="criterio"><span>Reconocimientos, distinciones y resultados obtenidos</span></div>
+          <div class="criterio"><span>Motivación, vocación y potencial de desarrollo</span></div>
         </div>
       </div>
 
@@ -1864,15 +2008,15 @@
           </svg>
         </div>
         <div class="programa-card-label">Modalidad 02</div>
-        <h3 class="programa-card-title">Alumnos con recursos insuficientes</h3>
+        <h3 class="programa-card-title">Beca por Razones Económicas</h3>
         <p class="programa-card-body">
-          Becas para niños y jóvenes de comunidades o situaciones desfavorecidas que desarrollan su formación en el ámbito artístico y musical. La inclusión y la accesibilidad como garantía: que aprender música no dependa de los recursos económicos.
+          Orientada a alumnos con <strong style="font-weight:600;color:var(--blanco);">limitaciones económicas acreditadas</strong>, incluidos niños y jóvenes de comunidades o situaciones desfavorecidas. Garantiza que los recursos de una familia no decidan la formación musical de un alumno.
         </p>
         <div class="programa-card-criterios">
-          <div class="programa-card-criterios-label">Qué financia</div>
-          <div class="criterio"><span>Matrícula, clases e instrumentos durante el curso</span></div>
-          <div class="criterio"><span>Continuidad de la formación a lo largo del año escolar</span></div>
-          <div class="criterio"><span>Igualdad de oportunidades de acceso a la música</span></div>
+          <div class="programa-card-criterios-label">Qué se valora</div>
+          <div class="criterio"><span>Situación económica acreditada de la unidad familiar</span></div>
+          <div class="criterio"><span>Criterios de equidad en circunstancias excepcionales</span></div>
+          <div class="criterio"><span>Complemento posible para instrumento, material o desplazamiento</span></div>
         </div>
       </div>
 
@@ -1880,19 +2024,210 @@
         <div class="programa-card-num">03</div>
         <div class="programa-card-icon">
           <svg viewBox="0 0 24 24">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            <path d="M3 21h18M3 7v1a3 3 0 006 0V7m6 0v1a3 3 0 006 0V7M3 7l3-4h12l3 4"/>
           </svg>
         </div>
-        <div class="programa-card-label">Modalidad 03</div>
-        <h3 class="programa-card-title">Alumnos excelentes</h3>
+        <div class="programa-card-label">Vía de canalización</div>
+        <h3 class="programa-card-title">A través de Instituciones Educativas</h3>
         <p class="programa-card-body">
-          Apoyo al talento emergente del ámbito artístico y musical: alumnos que destacan por su constancia y sus resultados y que necesitan recursos para desarrollar todo su potencial. Identificar el talento y darle con qué crecer.
+          Ambas modalidades pueden concederse directamente al alumno o <strong style="font-weight:600;color:var(--blanco);">canalizarse a través del centro educativo</strong> que promueve la formación artística, cultural y musical, para que la música sea parte real de su proyecto educativo.
         </p>
         <div class="programa-card-criterios">
-          <div class="programa-card-criterios-label">Qué financia</div>
-          <div class="criterio"><span>Formación avanzada y especializada del alumno</span></div>
-          <div class="criterio"><span>Recursos para competir y desarrollarse artísticamente</span></div>
-          <div class="criterio"><span>Trayectorias de talento sostenidas en el tiempo</span></div>
+          <div class="programa-card-criterios-label">Qué se valora</div>
+          <div class="criterio"><span>Proyecto educativo musical del centro y su alcance</span></div>
+          <div class="criterio"><span>Número de alumnos beneficiados y continuidad</span></div>
+          <div class="criterio"><span>Capacidad de justificar el destino de la beca</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRAMOS DE COBERTURA -->
+    <div class="reveal" style="margin-top:2px;background:var(--negro);padding:48px 48px 40px;position:relative;z-index:1;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--rojo);margin-bottom:12px;">Alcance de la beca</div>
+      <h3 style="font-family:var(--serif);font-size:32px;font-weight:300;color:var(--blanco);line-height:1.2;margin-bottom:16px;">La beca se gradúa. No es todo o nada.</h3>
+      <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.8;max-width:680px;margin-bottom:36px;">
+        Cada beca cubre un porcentaje del coste de la formación, determinado por el comité de becas en función del mérito acreditado, las circunstancias del candidato y la disponibilidad presupuestaria de la convocatoria. Los tramos son techos máximos, no un derecho automático.
+      </p>
+
+      <div class="tramos-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,0.06);">
+        <div style="background:#0D0D0D;padding:28px 24px;">
+          <div style="font-family:var(--serif);font-size:40px;font-weight:300;color:var(--blanco);line-height:1;margin-bottom:10px;">25<span style="font-size:20px;color:var(--rojo);">%</span></div>
+          <div style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:4px;">Tramo inicial</div>
+          <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.35);line-height:1.6;">Cobertura parcial del coste de la formación</div>
+        </div>
+        <div style="background:#0D0D0D;padding:28px 24px;">
+          <div style="font-family:var(--serif);font-size:40px;font-weight:300;color:var(--blanco);line-height:1;margin-bottom:10px;">50<span style="font-size:20px;color:var(--rojo);">%</span></div>
+          <div style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:4px;">Tramo medio</div>
+          <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.35);line-height:1.6;">Mérito o necesidad claramente acreditados</div>
+        </div>
+        <div style="background:#0D0D0D;padding:28px 24px;">
+          <div style="font-family:var(--serif);font-size:40px;font-weight:300;color:var(--blanco);line-height:1;margin-bottom:10px;">75<span style="font-size:20px;color:var(--rojo);">%</span></div>
+          <div style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:4px;">Tramo alto</div>
+          <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.35);line-height:1.6;">Excelencia sostenida o necesidad severa</div>
+        </div>
+        <div style="background:#0D0D0D;padding:28px 24px;border-top:2px solid var(--rojo);">
+          <div style="font-family:var(--serif);font-size:40px;font-weight:300;color:var(--blanco);line-height:1;margin-bottom:10px;">100<span style="font-size:20px;color:var(--rojo);">%</span></div>
+          <div style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:4px;">Carácter excepcional</div>
+          <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.35);line-height:1.6;">Mérito o circunstancias excepcionalmente acreditados, con límite de plazas</div>
+        </div>
+      </div>
+
+      <p style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.3);line-height:1.7;margin-top:24px;">
+        Las becas son compatibles con otras ayudas públicas o privadas destinadas a la misma finalidad, siempre que el conjunto de beneficios no supere el coste total de la formación. Un mismo candidato puede optar a ambas modalidades en una única solicitud.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 4b. MODALIDAD 01 · BECA AL TALENTO ──────── -->
+<section id="beca-talento" class="modalidad mod-crema">
+  <div class="mod-num-bg">01</div>
+  <div class="container mod-inner">
+    <div class="mod-head reveal">
+      <div class="mod-label">Modalidad 01 · Criterio de mérito</div>
+      <h2 class="mod-name">Beca<br>al <em>Talento</em></h2>
+      <p class="mod-principle">
+        El talento se reconoce donde aparece. <strong>La situación económica no es un requisito, ni a favor ni en contra.</strong>
+      </p>
+    </div>
+
+    <div class="mod-grid">
+      <div class="reveal reveal-delay-1">
+        <p class="mod-narrative">
+          Dirigida a alumnos que acreditan un nivel musical y académico elevado. Es la modalidad que premia la <strong>excelencia y la constancia</strong>: alumnos que destacan por sus resultados, su progresión y su compromiso con la música, y que necesitan recursos para desarrollar todo su potencial.
+        </p>
+        <div class="mod-pull reveal reveal-delay-2">
+          Una beca al talento no pregunta de dónde viene el alumno. Pregunta hasta dónde puede llegar.
+        </div>
+        <p class="mod-narrative reveal reveal-delay-2">
+          Un alumno con recursos y un alumno sin ellos pueden recibir esta beca en igualdad de condiciones: lo que se valora es el mérito. Cuando además concurre una necesidad económica, esa circunstancia se atiende por la <strong>Modalidad 02</strong>, de forma independiente y acumulable.
+        </p>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="mod-block">
+          <div class="mod-block-label">Qué se valora</div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text"><strong>Nivel musical acreditado</strong> y progresión formativa sostenida</div></div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Reconocimientos, distinciones y resultados obtenidos</div></div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Motivación, vocación y potencial de desarrollo</div></div>
+        </div>
+        <div class="mod-block">
+          <div class="mod-block-label">Qué cubre</div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Un porcentaje del <strong>coste de la formación musical</strong>, según tramo concedido</div></div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Cobertura anual, renovable si el alumno mantiene su rendimiento</div></div>
+        </div>
+        <div class="mod-sponsor">
+          <div class="mod-sponsor-label">Para el patrocinador</div>
+          <p class="mod-sponsor-text">Asocia tu marca a la <strong>excelencia y el esfuerzo</strong>. Es la modalidad de mayor visibilidad reputacional: reconocer públicamente a los mejores conecta con valores de mérito, ambición y calidad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 4c. MODALIDAD 02 · RAZONES ECONÓMICAS ────── -->
+<section id="beca-economica" class="modalidad mod-dark">
+  <div class="mod-num-bg">02</div>
+  <div class="container mod-inner">
+    <div class="mod-head reveal">
+      <div class="mod-label">Modalidad 02 · Criterio de equidad</div>
+      <h2 class="mod-name">Beca por<br>Razones <em>Económicas</em></h2>
+      <p class="mod-principle">
+        Que los recursos de una familia <strong>no decidan</strong> la formación musical de un alumno.
+      </p>
+    </div>
+
+    <div class="mod-grid">
+      <div class="reveal reveal-delay-1">
+        <p class="mod-narrative">
+          Orientada a alumnos con <strong>limitaciones económicas acreditadas</strong>, incluidos niños y jóvenes de comunidades o situaciones desfavorecidas que desarrollan su formación en el ámbito artístico y musical. Aquí el criterio no es el mérito, sino la necesidad: es la palanca de acceso e inclusión del programa.
+        </p>
+        <div class="mod-pull reveal reveal-delay-2">
+          Fomentar la inclusión y la accesibilidad para que todos tengan la oportunidad de aprender y disfrutar de la música.
+        </div>
+        <p class="mod-narrative reveal reveal-delay-2">
+          La situación económica de la unidad familiar se evalúa con criterios objetivos. En circunstancias excepcionales debidamente justificadas, el comité de becas puede aplicar <strong>criterios de equidad</strong> atendiendo al espíritu del programa.
+        </p>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="mod-block">
+          <div class="mod-block-label">Qué se valora</div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text"><strong>Situación económica acreditada</strong> de la unidad familiar</div></div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Criterios de equidad en situaciones excepcionales justificadas</div></div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Compatibilidad con otras ayudas, sin superar el coste total</div></div>
+        </div>
+        <div class="mod-block">
+          <div class="mod-block-label">Qué cubre</div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Un porcentaje del <strong>coste de la formación</strong>, según tramo concedido</div></div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text"><strong>Complemento posible</strong> para instrumento, material o desplazamiento, cuando la situación lo justifique</div></div>
+        </div>
+        <div class="mod-sponsor">
+          <div class="mod-sponsor-label">Para el patrocinador</div>
+          <p class="mod-sponsor-text">Es la modalidad de mayor <strong>impacto social directo</strong> y la que mejor alinea con el factor S del marco ESG: acceso, igualdad de oportunidades e inclusión, con beneficiario verificable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 4d. MODALIDAD 03 · INSTITUCIONES ─────────── -->
+<section id="beca-instituciones" class="modalidad mod-crema">
+  <div class="mod-num-bg">03</div>
+  <div class="container mod-inner">
+    <div class="mod-head reveal">
+      <div class="mod-label">Vía de canalización</div>
+      <h2 class="mod-name">A través de<br><em>Instituciones</em> Educativas</h2>
+      <p class="mod-principle">
+        No es una tercera modalidad: es <strong>cómo llega la beca</strong>. Y cómo llega a más alumnos a la vez.
+      </p>
+    </div>
+
+    <div class="mod-grid">
+      <div class="reveal reveal-delay-1">
+        <p class="mod-narrative">
+          Tanto la Beca al Talento como la Beca por Razones Económicas pueden concederse directamente al alumno o <strong>canalizarse a través del centro educativo</strong> que promueve la formación artística, cultural y musical. La institución recibe y aplica la beca para que la música forme parte real de su proyecto educativo.
+        </p>
+        <p class="mod-narrative reveal reveal-delay-2">
+          Es la vía que multiplica el alcance: una misma aportación puede beneficiar a <strong>varios alumnos</strong> dentro de un mismo centro y consolidar un programa musical estable, no una ayuda puntual.
+        </p>
+
+        <div class="mod-flow reveal reveal-delay-2">
+          <div class="mod-flow-node">
+            <div class="mod-flow-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <div class="mod-flow-title">Fundación</div>
+            <div class="mod-flow-sub">Concede la beca</div>
+          </div>
+          <div class="mod-flow-arrow">→</div>
+          <div class="mod-flow-node node-accent">
+            <div class="mod-flow-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v1a3 3 0 006 0V7m6 0v1a3 3 0 006 0V7M3 7l3-4h12l3 4"/></svg></div>
+            <div class="mod-flow-title">Institución</div>
+            <div class="mod-flow-sub">Recibe y aplica</div>
+          </div>
+          <div class="mod-flow-arrow">→</div>
+          <div class="mod-flow-node">
+            <div class="mod-flow-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
+            <div class="mod-flow-title">Alumnos</div>
+            <div class="mod-flow-sub">Varios beneficiarios</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="mod-block">
+          <div class="mod-block-label">Qué se valora</div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text"><strong>Proyecto educativo musical</strong> del centro y su alcance</div></div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Número de alumnos beneficiados y continuidad en el tiempo</div></div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Capacidad de <strong>justificar el destino</strong> de la beca</div></div>
+        </div>
+        <div class="mod-block">
+          <div class="mod-block-label">Qué aporta</div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Efecto multiplicador: <strong>un centro, muchos alumnos</strong></div></div>
+          <div class="mod-item"><div class="mod-item-mark"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="mod-item-text">Programas musicales estables frente a ayudas puntuales</div></div>
+        </div>
+        <div class="mod-sponsor">
+          <div class="mod-sponsor-label">Para el patrocinador</div>
+          <p class="mod-sponsor-text">La opción de mayor <strong>escala por euro invertido</strong>: el impacto se concentra en una comunidad educativa concreta y es fácil de comunicar y visitar.</p>
         </div>
       </div>
     </div>
@@ -1933,11 +2268,11 @@
       </h2>
 
       <blockquote class="proceso-quote reveal reveal-delay-2">
-        "Su empresa, detrás de una beca concreta. Asociada al acceso, la inclusión y el talento, con un destino verificable y un seguimiento real."
+        "Su empresa, detrás de una beca concreta. Asociada al mérito y a la equidad, con un destino verificable y un seguimiento real."
       </blockquote>
 
       <p class="section-body reveal reveal-delay-3">
-        Las becas son anuales y coinciden con el año escolar. Cada ejercicio, un comité de becas examina y aprueba las solicitudes recibidas conforme a las tres modalidades. Eso convierte cada aportación en algo tangible: un alumno, un centro o un talento concreto, durante un curso completo, con resultados de los que se informa al patrocinador.
+        Las becas son anuales y coinciden con el año escolar. Cada ejercicio, un comité de becas examina y resuelve las solicitudes en régimen de concurrencia competitiva, valorando el mérito y, en su caso, la situación económica del candidato. La continuidad no es automática: se renueva si el alumno mantiene su rendimiento y su compromiso. Eso convierte cada aportación en algo tangible y verificable, durante un curso completo.
       </p>
 
       <div class="proceso-features reveal reveal-delay-4">
@@ -1959,15 +2294,15 @@
           <div class="proceso-feature-icon">
             <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
-          <div class="proceso-feature-title">Destino íntegro</div>
-          <div class="proceso-feature-body">Cada euro aportado va dirigido a la beca y al alumno o centro beneficiario.</div>
+          <div class="proceso-feature-title">Renovación con criterio</div>
+          <div class="proceso-feature-body">La beca se mantiene si el alumno sostiene su rendimiento y su compromiso.</div>
         </div>
         <div class="proceso-feature">
           <div class="proceso-feature-icon">
             <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
-          <div class="proceso-feature-title">Seguimiento e informe</div>
-          <div class="proceso-feature-body">Informe de impacto del curso, listo para memoria de sostenibilidad.</div>
+          <div class="proceso-feature-title">Transparencia y memoria</div>
+          <div class="proceso-feature-body">Memoria anual del programa e informe de impacto para el patrocinador.</div>
         </div>
       </div>
     </div>
@@ -1985,9 +2320,9 @@
 
     <div class="stats-grid">
       <div class="stat-card reveal">
-        <div class="stat-num"><span>3</span></div>
-        <div class="stat-label">Modalidades</div>
-        <div class="stat-sub">Instituciones, acceso e inclusión, y talento</div>
+        <div class="stat-num"><span>2</span></div>
+        <div class="stat-label">Criterios de concesión</div>
+        <div class="stat-sub">Talento y razones económicas, independientes entre sí</div>
       </div>
       <div class="stat-card reveal reveal-delay-1">
         <div class="stat-num"><span>1</span></div>
@@ -2013,7 +2348,7 @@
           <div class="testimonial-avatar">FGM</div>
           <div>
             <div class="testimonial-name">El propósito de la beca</div>
-            <div class="testimonial-role">Modalidad de acceso e inclusión</div>
+            <div class="testimonial-role">Modalidad · Beca por Razones Económicas</div>
           </div>
         </div>
       </div>
@@ -2023,17 +2358,17 @@
           <div class="testimonial-avatar">FGM</div>
           <div>
             <div class="testimonial-name">El propósito de la beca</div>
-            <div class="testimonial-role">Modalidad de instituciones educativas</div>
+            <div class="testimonial-role">Modalidad · Beca a Instituciones Educativas</div>
           </div>
         </div>
       </div>
       <div class="testimonial reveal reveal-delay-2">
-        <p class="testimonial-text">"El talento existe en todas partes; lo que no siempre existe son los recursos para desarrollarlo. Una beca es exactamente eso: el recurso que llega a tiempo."</p>
+        <p class="testimonial-text">"Una beca al talento no pregunta de dónde viene el alumno. Pregunta hasta dónde puede llegar, y le da los medios para intentarlo."</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar">FGM</div>
           <div>
             <div class="testimonial-name">El propósito de la beca</div>
-            <div class="testimonial-role">Modalidad de talento emergente</div>
+            <div class="testimonial-role">Modalidad · Beca al Talento</div>
           </div>
         </div>
       </div>
@@ -2090,7 +2425,7 @@
         </div>
         <ul class="patrocinio-beneficios">
           <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Naming del programa anual: «Programa de Becas FGM — [tu marca]»</span></li>
-          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Sostén transversal de las tres modalidades de becas del curso</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Sostén transversal de todas las modalidades de becas del curso</span></li>
           <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Presencia prominente en toda la comunicación del programa</span></li>
           <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Co-protagonismo en el acto de entrega o presentación de becas</span></li>
           <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Vídeo y reportaje de marca en torno al impacto de las becas</span></li>
@@ -2109,11 +2444,11 @@
           <div class="precio-num">7.000 €</div>
           <div class="precio-label">Aportación anual · por curso</div>
           <div class="precio-slots">
-            <div class="precio-slots-text">Hasta 3 · una por modalidad</div>
+            <div class="precio-slots-text">Hasta 3 · Talento, Razones económicas o Instituciones</div>
           </div>
         </div>
         <ul class="patrocinio-beneficios">
-          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Apadrinamiento de una modalidad completa (un grupo de becas)</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Apadrinamiento de una modalidad completa (Talento, Razones económicas o Instituciones)</span></li>
           <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Asociación de marca a esa modalidad durante el curso</span></li>
           <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Logo en la web y comunicaciones del Programa de Becas</span></li>
           <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Mención en nota de prensa de la convocatoria del curso</span></li>
@@ -2127,28 +2462,9 @@
 
     </div>
 
-    <!-- FINANCIACIÓN TOTAL -->
-    <div class="financiacion-box reveal" style="margin-top:2px;">
-      <div class="fin-item">
-        <div class="fin-num">1 × <span>16K</span></div>
-        <div class="fin-label">Mecenas del Programa</div>
-      </div>
-      <div class="fin-item">
-        <div class="fin-num">3 × <span>7K</span></div>
-        <div class="fin-label">Patrocinadores</div>
-      </div>
-      <div class="fin-item">
-        <div class="fin-num">6 × <span>2K</span></div>
-        <div class="fin-label">Padrinos de beca</div>
-      </div>
-      <div class="fin-item" style="border-right:none;">
-        <div class="fin-num"><span>49.000</span> €</div>
-        <div class="fin-label">Potencial por curso</div>
-      </div>
-    </div>
 
     <!-- NOTA: APORTACIONES EN ESPECIE -->
-    <div style="margin-top:2px;padding:24px 28px;background:var(--gris-muy-suave);border:1px solid var(--gris-suave);">
+    <div style="margin-top:48px;padding:24px 28px;background:var(--gris-muy-suave);border:1px solid var(--gris-suave);">
       <p style="font-size:12px;font-weight:300;color:var(--gris-institucional);line-height:1.7;">
         <strong style="font-weight:600;color:var(--negro);">Aportaciones en especie y convenios.</strong> Además de las aportaciones económicas, se admiten contribuciones en especie (instrumentos, material, espacios, servicios) y convenios de colaboración a medida. Cualquier alcance puede formalizarse como donación (Ley 49/2002), patrocinio publicitario o convenio de colaboración empresarial, cada uno con su tratamiento fiscal y documental.
       </p>
@@ -2205,7 +2521,7 @@
         <div class="esg-card-ods">8</div>
         <div class="esg-card-tag">ODS 8</div>
         <h3 class="esg-card-title">Talento y desarrollo</h3>
-        <p class="esg-card-body">Identificar y nutrir el talento emergente para que pueda desarrollar todo su potencial. Inversión en las trayectorias y el futuro profesional de los jóvenes.</p>
+        <p class="esg-card-body">Reconocer y sostener el talento allí donde aparece, con independencia del origen del alumno. Inversión en trayectorias y en el futuro profesional de los jóvenes.</p>
       </div>
     </div>
 
